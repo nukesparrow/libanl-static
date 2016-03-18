@@ -49,6 +49,15 @@ struct gaicb {
 #define GAI_WAIT	0
 #define GAI_NOWAIT	1
 
+#define EAI_NODATA	  -5	/* No address associated with NAME.  */
+#define EAI_ADDRFAMILY  -9	/* Address family for NAME not supported.  */
+#define EAI_INPROGRESS  -100	/* Processing request in progress.  */
+#define EAI_CANCELED	  -101	/* Request canceled.  */
+#define EAI_NOTCANCELED -102	/* Request not canceled.  */
+#define EAI_ALLDONE	  -103	/* All requests done.  */
+#define EAI_INTR	  -104	/* Interrupted by a signal.  */
+#define EAI_IDN_ENCODE  -105	/* IDN encoding failed.  */
+
 #endif
 
 int __anl_s_getaddrinfo_a(int mode, struct gaicb *list[],
